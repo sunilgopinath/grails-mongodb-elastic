@@ -1,1 +1,5 @@
 #### This is where I will keep track of creating the application #####
+
+1. To create the stub grails framework I used netbeans create grails app
+2. To add mongodb to grails and removed hibernate I used a tip from http://etcpe9.wordpress.com/2012/01/28/beginning-grails-2-0-with-mongodb/
+3. To start creating domain classes and controllers I used Grails - A Quick Start Guide
