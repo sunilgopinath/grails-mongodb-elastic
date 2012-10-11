@@ -1,5 +1,13 @@
 #### This is where I will keep track of creating the application #####
 
 1. To create the stub grails framework I used netbeans create grails app
-2. To add mongodb to grails and removed hibernate I used a tip from http://etcpe9.wordpress.com/2012/01/28/beginning-grails-2-0-with-mongodb/
+2. To add mongodb to grails and removed hibernate I used a tip from 
+http://etcpe9.wordpress.com/2012/01/28/beginning-grails-2-0-with-mongodb/
+INSTALLING MONGODB
+ - I ran grails install-plugin mongodb but got an error saying I need to specify the version
+ - Used the grails shell but then got an error about missing property
+ - finally tried Grails plugins... that worked
+REMOVING HIBERNATE
+ - I ran grails uninstall-plugin hibernate from the "Run Grails Command" but to no avail
+ - just removed runtime ":hibernate:$grailsVersion" from /grails-app/conf/BuildConfig.groovy
 3. To start creating domain classes and controllers I used Grails - A Quick Start Guide
