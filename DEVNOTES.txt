@@ -11,3 +11,5 @@ REMOVING HIBERNATE
  - I ran grails uninstall-plugin hibernate from the "Run Grails Command" but to no avail
  - just removed runtime ":hibernate:$grailsVersion" from /grails-app/conf/BuildConfig.groovy
 3. To start creating domain classes and controllers I used Grails - A Quick Start Guide
+4. Scaffolding does not seem to work with mongodb. I tried to create a textarea by default through constraints
+but am unable to do so. Also I cannot change the order of the fields.
