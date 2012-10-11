@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" id="0" name="BlogEntryTests" package="com.company.cms" tests="1" time="0.947" timestamp="2012-10-11T02:57:08">
+      <properties />
+
+      <testcase classname="com.company.cms.BlogEntryTests" name="testToString" time="0.88" />
+
+      <system-out><![CDATA[--Output from testToString--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testToString--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" id="1" name="PersonTests" package="com.company.cms" tests="1" time="0.121" timestamp="2012-10-11T02:57:09">
+      <properties />
+
+      <testcase classname="com.company.cms.PersonTests" name="testToString" time="0.117" />
+
+      <system-out><![CDATA[--Output from testToString--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testToString--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

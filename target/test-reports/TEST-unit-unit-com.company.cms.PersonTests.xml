@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" name="com.company.cms.PersonTests" tests="1" time="0.121" timestamp="2012-10-11T02:57:09">
+  <properties />
+  <testcase classname="com.company.cms.PersonTests" name="testToString" time="0.117" />
+  <system-out><![CDATA[--Output from testToString--
+]]></system-out>
+  <system-err><![CDATA[--Output from testToString--
+]]></system-err>
+</testsuite>
