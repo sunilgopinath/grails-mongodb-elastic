@@ -1,0 +1,10 @@
+Testsuite: com.company.cms.BlogEntryControllerTests
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 2.17 sec
+------------- Standard Output ---------------
+--Output from testSomething--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testSomething--
+------------- ---------------- ---------------
+
+Testcase: testSomething took 2.023 sec

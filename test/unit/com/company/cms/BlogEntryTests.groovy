@@ -13,7 +13,7 @@ class BlogEntryTests {
 
     void testToString() {
        def blogEntry = new BlogEntry(title: 'A sample title',
-                                     author: 'Sunil Gopinath',
+                                     author: [first: 'Sunil', last:'Gopinath'] as Person,
                                      published: new Date('6/5/2010'),
                                      entryText: 'This is some sample text')
       assertEquals 'A sample title - Sunil Gopinath', blogEntry.toString()

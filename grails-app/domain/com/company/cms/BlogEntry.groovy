@@ -3,11 +3,17 @@ package com.company.cms
 class BlogEntry {
 
     String title
-    String author
+    Person author
     Date published
     String entryText
 
     static constraints = {
+
+        title()
+        author()
+        published()
+        entryText(maxSize:5000)
+        
     }
 
     String toString() {
