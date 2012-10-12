@@ -1,0 +1,23 @@
+/* 
+    Document   : custom
+    Created on : Oct 12, 2012, 1:25:03 AM
+    Author     : sxg282
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+div.exampleboxshadowe {
+    background-color: #EEEEEE;
+    box-shadow: 0 0 5px #888888;
+    float: left;
+    height: 65px;
+    margin-right: 40px;
+    margin-top: 20px;
+    text-align: center;
+    width: 750px;
+}
