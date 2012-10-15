@@ -59,6 +59,8 @@ grails.exceptionresolver.params.exclude = ['password']
 // enable query caching by default
 grails.hibernate.cache.queries = true
 
+grails.resources.adhoc.excludes = ['/js/tiny_mce/**/*.*']
+
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
@@ -91,3 +93,8 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+twitterPanel.username = 'techniclysunil'
+twitterPanel.password = 'fifa2011'
+twitterPanel.server.updateInterval = 150 // (optional) default 5 minutes
+twitterPanel.updateInterval = 120 // (optional)  default 2 minutes

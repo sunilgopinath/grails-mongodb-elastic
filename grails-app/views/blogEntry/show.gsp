@@ -1,5 +1,6 @@
 
 <%@ page import="com.company.cms.BlogEntry" %>
+<%@page defaultCode="none"%>
 <!doctype html>
 <html>
 	<head>
@@ -36,7 +37,7 @@
 				<li class="fieldcontain">
 					<span id="entryText-label" class="property-label"><g:message code="blogEntry.entryText.label" default="Entry Text" /></span>
 					
-						<span class="property-value" aria-labelledby="entryText-label"><g:fieldValue bean="${blogEntryInstance}" field="entryText"/></span>
+						<span class="property-value" aria-labelledby="entryText-label">${blogEntryInstance.entryText}</span>
 					
 				</li>
 				</g:if>

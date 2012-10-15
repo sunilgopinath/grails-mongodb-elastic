@@ -5,6 +5,14 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'blogEntry.label', default: 'BlogEntry')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
+                <g:javascript>
+tinyMCE.init({
+        theme : "advanced",
+        mode : "textareas",
+        theme_advanced_buttons3_add : "fullpage"
+});
+
+                </g:javascript>
 	</head>
 	<body>
 		<a href="#create-blogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

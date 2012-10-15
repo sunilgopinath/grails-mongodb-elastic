@@ -19,11 +19,13 @@
         <r:layoutResources />
 	</head>
 	<body>
+          
           <g:render template="/grails-app/views/layouts/topnav"/>
           <g:render template="/grails-app/views/layouts/body"/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
                 <g:javascript library="application"/>
+                <g:javascript src="tiny_mce/tiny_mce.js"/>
         <r:layoutResources />
 	</body>
 </html>
