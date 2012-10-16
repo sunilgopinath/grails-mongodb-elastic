@@ -7,67 +7,97 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'blogEntry.label', default: 'BlogEntry')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+                <style>
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			margin-top: 50px;
+		}
+
+		h1 {
+			color: #262626;
+			font-family: "Enriqueta", serif;
+			font-size: 44px;
+			line-height: 48px;
+			margin: 0 0 30px;
+		}
+
+		h2 {
+			color: #262626;
+			font-family: "Enriqueta", serif;
+			font-size: 32px;
+			font-weight: normal;
+			line-height: 42px;
+			margin: 0 0 24px;
+			padding: 12px 0 0;
+		}
+
+		h3 {
+			color: #c73036;
+			font-family: "Enriqueta", serif;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 24px;
+			margin: 0 0 24px;
+			padding: 12px 0 0;
+			text-transform: uppercase;
+		}
+
+		p {
+			color: #2f2f2f;
+			font-family: Georgia, serif;
+			font-size: 17px;
+			line-height: 24px;
+			margin: 0 0 24px;
+		}
+
+		.post-info {
+			color: #aaaaaa;
+			font-family: Georgia, serif;
+			font-size: 12px;
+			font-style: italic;
+			line-height: 12px;
+			padding: 24px 0;
+		}
+
+		.post-info a {
+			color: #c73036;
+			font-family: "Enriqueta", serif;
+			font-style: normal;
+			font-weight: bold;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		</style>
 	</head>
 	<body>
-		<a href="#show-blogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+          <ul class="breadcrumb">
+            <li><a href="${createLink(uri: '/')}">Home</a> <span class="divider">/</span></li>
+            <li><a href="${createLink(uri: '/blogEntry/list')}"><g:message code="blog.breadcrumb.list.label" default="All Entries" /></a> <span class="divider">/</span></li>
+            <li class="active">${blogEntryInstance.title}</li>
+          </ul>
+          <a href="${createLink(uri: "/blogEntry/edit/${blogEntryInstance?.id}")}">
+              <g:actionSubmit class="btn btn-primary pull-right" value="${message(code: 'blog.edit.label', default: 'Edit entry')}" />
+          </a>
 		<div id="show-blogEntry" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<ol class="property-list blogEntry">
-			
-				<g:if test="${blogEntryInstance?.author}">
-				<li class="fieldcontain">
-					<span id="author-label" class="property-label"><g:message code="blogEntry.author.label" default="Author" /></span>
-					
-						<span class="property-value" aria-labelledby="author-label"><g:link controller="person" action="show" id="${blogEntryInstance?.author?.id}">${blogEntryInstance?.author?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${blogEntryInstance?.entryText}">
-				<li class="fieldcontain">
-					<span id="entryText-label" class="property-label"><g:message code="blogEntry.entryText.label" default="Entry Text" /></span>
-					
-						<span class="property-value" aria-labelledby="entryText-label">${blogEntryInstance.entryText}</span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${blogEntryInstance?.published}">
-				<li class="fieldcontain">
-					<span id="published-label" class="property-label"><g:message code="blogEntry.published.label" default="Published" /></span>
-					
-						<span class="property-value" aria-labelledby="published-label"><g:formatDate date="${blogEntryInstance?.published}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${blogEntryInstance?.title}">
-				<li class="fieldcontain">
-					<span id="title-label" class="property-label"><g:message code="blogEntry.title.label" default="Title" /></span>
-					
-						<span class="property-value" aria-labelledby="title-label"><g:fieldValue bean="${blogEntryInstance}" field="title"/></span>
-					
-				</li>
-				</g:if>
-			
-			</ol>
-			<g:form>
-				<fieldset class="buttons">
-					<g:hiddenField name="id" value="${blogEntryInstance?.id}" />
-					<g:link class="edit" action="edit" id="${blogEntryInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
+                  	
+                  <div style="width:500px;margin:0 auto;">
+                    <h1>${blogEntryInstance.title}</h1>
+                    <div class="post-info">posted by 
+                      <g:link controller="person" action="show" id="${blogEntryInstance?.author?.id}">
+                        ${blogEntryInstance?.author?.encodeAsHTML()}
+                      </g:link> on <g:formatDate date="${blogEntryInstance?.published}" format="MM-dd-yyy"/>
+                    </div>
+                    ${blogEntryInstance.entryText}
+                  </div>
 		</div>
 	</body>
 </html>

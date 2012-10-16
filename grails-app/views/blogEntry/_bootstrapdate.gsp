@@ -5,7 +5,7 @@
 			$('#dp3').datepicker();
 
 		});
-                function goToPage(){
+                function filInDate(){
                   var h = $('#d12').val();
                   var m = $('#d12').val().split("-");
                   $('#pd').val(m[0]);

@@ -5,14 +5,6 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'blogEntry.label', default: 'BlogEntry')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
-                <g:javascript>
-tinyMCE.init({
-        theme : "advanced",
-        mode : "textareas",
-        theme_advanced_buttons3_add : "fullpage"
-});
-
-                </g:javascript>
 	</head>
 	<body>
           <ul class="breadcrumb">
@@ -36,8 +28,8 @@ tinyMCE.init({
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
+					<g:submitButton name="create" class="save btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                                </fieldset>
 			</g:form>
 		</div>
                     <g:render template="bootstrapdate"/>

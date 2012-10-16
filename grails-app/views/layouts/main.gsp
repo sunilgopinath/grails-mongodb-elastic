@@ -15,6 +15,7 @@
 		<r:require modules="bootstrap"/>
                 <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
                 <link rel="stylesheet" href="${resource(dir: 'css', file: 'datepicker.css')}" type="text/css">
+                <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
 		<g:layoutHead/>
         <r:layoutResources />
 	</head>
