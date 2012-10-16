@@ -56,6 +56,14 @@
     </div>
 </div>
 
+<!-- password field -->
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'twitterHandle', 'error')} control-group">
+  <label class="control-label" for="twitterHandle"><g:message code="person.twitterHandle.label" default="Twitter Handle" /></label>
+    <div class="controls">
+      <g:textField name="twitterHandle" value="${personInstance?.twitterHandle}"  class="input-xlarge"/>
+    </div>
+</div>
+
 <!-- username field -->
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'username', 'error')} control-group">
   <label class="control-label" for="username"><g:message code="person.username.label" default="Username" /></label>

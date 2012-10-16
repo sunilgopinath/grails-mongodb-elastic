@@ -10,6 +10,7 @@ class Person {
     String bio
     String username
     String password
+    String twitterHandle
 
 
     static constraints = {
@@ -22,6 +23,7 @@ class Person {
         bio(maxSize:5000)
         username()
         password()
+        twitterHandle()
     }
 
     String toString() {

@@ -88,8 +88,10 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-                  	
-                  <div style="width:500px;margin:0 auto;">
+                        <g:if test="${blogEntryInstance?.author?.twitterHandle}">
+                  	<a href="https://twitter.com/techniclysunil" class="twitter-follow-button" data-show-count="false">Follow @techniclysunil</a>
+                  </g:if>
+                        <div style="width:500px;margin:0 auto;">
                     <h1>${blogEntryInstance.title}</h1>
                     <div class="post-info">posted by 
                       <g:link controller="person" action="show" id="${blogEntryInstance?.author?.id}">
@@ -99,5 +101,7 @@
                     ${blogEntryInstance.entryText}
                   </div>
 		</div>
+                  <g:render template="/grails-app/views/layouts/twitterfollow"/>
 	</body>
+
 </html>
