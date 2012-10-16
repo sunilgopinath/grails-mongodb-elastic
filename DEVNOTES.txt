@@ -13,3 +13,29 @@ REMOVING HIBERNATE
 3. To start creating domain classes and controllers I used Grails - A Quick Start Guide
 4. Scaffolding does not seem to work with mongodb. I tried to create a textarea by default through constraints
 but am unable to do so. Also I cannot change the order of the fields.
+ADDING TINYMCE to GRAILS PROJECT
+This proved to be quite the challenge
+1. Download tinymce from http://www.tinymce.com/download/download.php => Gives you a file ~/tinymce
+2. Copy ~/tinymce to /web-apps/js/tiny_mce
+3. In main.gsp add <g:javascript src="tiny_mce/tiny_mce.js"/> This will pick up the folder under the web-apps/js folder
+4. Tiny mce still won't work at this point. It will complain about en.js and editor_template.js
+5. You have to go to Config.groovy and add this line grails.resources.adhoc.excludes = ['/js/tiny_mce/**/*.*']
+6. Now back to the gsp, add the tiny_mce.init() line ex 
+tinyMCE.init({
+        theme : "advanced",
+        mode : "textareas",
+        plugins : "fullpage",
+        theme_advanced_buttons3_add : "fullpage"
+});
+inside <g:javascript> tags like
+<g:javascript>
+tinyMCE.init({
+        theme : "advanced",
+        mode : "textareas",
+        plugins : "fullpage",
+        theme_advanced_buttons3_add : "fullpage"
+});
+</g:javascript>
+7. Now add the textarea as per usual <g:textArea name="..."/>
+8. Grails escapes html by default inside thinkgs like ${fieldValue(bean:...)} so your beautiful tiny mce markup will be escaped
+9. Change the above to ${object.field} and ex: ${person.firstName} and there you have it.
