@@ -89,7 +89,7 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
                         <g:if test="${blogEntryInstance?.author?.twitterHandle}">
-                  	<a href="https://twitter.com/techniclysunil" class="twitter-follow-button" data-show-count="false">Follow @techniclysunil</a>
+                  	<a href="https://twitter.com/${blogEntryInstance?.author?.twitterHandle}" class="twitter-follow-button" data-show-count="false">${blogEntryInstance?.author?.twitterHandle}</a>
                   </g:if>
                         <div style="width:500px;margin:0 auto;">
                     <h1>${blogEntryInstance.title}</h1>
