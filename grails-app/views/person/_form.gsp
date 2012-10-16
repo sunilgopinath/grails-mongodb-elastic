@@ -55,3 +55,19 @@
       <g:textField name="image" value="${personInstance?.image}" class="input-xlarge" />
     </div>
 </div>
+
+<!-- username field -->
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'username', 'error')} control-group">
+  <label class="control-label" for="username"><g:message code="person.username.label" default="Username" /></label>
+    <div class="controls">
+      <g:textField name="username" value="${personInstance?.username}"  class="input-xlarge"/>
+    </div>
+</div>
+
+<!-- password field -->
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'password', 'error')} control-group">
+  <label class="control-label" for="password"><g:message code="person.password.label" default="Password" /></label>
+    <div class="controls">
+      <g:textField name="password" value="${personInstance?.password}"  class="input-xlarge"/>
+    </div>
+</div>

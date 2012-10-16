@@ -100,4 +100,29 @@ class PersonController {
             redirect(action: "show", id: params.id)
         }
     }
+
+    def login = {
+        if(params.cName) {
+            return [cName:params.cName, aName:params.aName]
+        }
+    }
+
+    def logout = {
+        session.user = null
+        redirect(url:resource(dir:''))
+    }
+
+    def validate = {
+        def person = Person.findByUsername(params.username)
+        if(person && person.password == params.password) {
+            session.user = person
+            if(params.cName)
+               redirect(controller:params.cName, action:params.aName)
+            else
+               redirect(controller:'blogEntry', action:'list')
+        } else {
+            flash.message = "Invalid username and password"
+            render(view:'login')
+        }
+    }
 }

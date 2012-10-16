@@ -8,6 +8,8 @@ class Person {
     String github
     String image
     String bio
+    String username
+    String password
 
 
     static constraints = {
@@ -18,6 +20,8 @@ class Person {
         github()
         image()
         bio(maxSize:5000)
+        username()
+        password()
     }
 
     String toString() {
