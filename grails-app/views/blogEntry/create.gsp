@@ -15,15 +15,12 @@ tinyMCE.init({
                 </g:javascript>
 	</head>
 	<body>
-		<a href="#create-blogEntry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+          <ul class="breadcrumb">
+            <li><a href="${createLink(uri: '/')}">Home</a> <span class="divider">/</span></li>
+            <li><a href="${createLink(uri: '/blogEntry/list')}"><g:message code="blog.breadcrumb.label" default="Blogs" /></a> <span class="divider">/</span></li>
+            <li class="active"><g:message code="blog.create.label" default="Create New Entry" /></li>
+          </ul>
 		<div id="create-blogEntry" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -43,5 +40,6 @@ tinyMCE.init({
 				</fieldset>
 			</g:form>
 		</div>
+                    <g:render template="bootstrapdate"/>
 	</body>
 </html>

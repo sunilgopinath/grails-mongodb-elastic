@@ -7,14 +7,6 @@
 		<g:set var="entityName" value="${message(code: 'blogEntry.label', default: 'BlogEntry')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
                 <g:javascript library="jquery" />
-                <g:javascript type="text/javascript">
-
-$(document).ready(function(){
- $('.datepicker').datepicker()
-});
-
-</g:javascript>
-                <g:javascript src="bootstrap-datepicker.js"/>
 	</head>
 	<body>
           <ul class="breadcrumb">
@@ -45,7 +37,7 @@ $(document).ready(function(){
 					<td><g:link action="show" id="${blogEntryInstance.id}">${fieldValue(bean: blogEntryInstance, field: "title")}</g:link></td>
 						<td><g:link action="${createLink(uri: '../grails-app/')}" id="${blogEntryInstance.author.id}">${fieldValue(bean: blogEntryInstance, field: "author")}</g:link></td>
 					
-						<td>${fieldValue(bean: blogEntryInstance, field: "excerpt")}
+						<td>${blogEntryInstance.excerpt}
                                                 <g:if test="${blogEntryInstance.truncated}">
                                                   <g:link action="show" id="${blogEntryInstance.id}">[READ MORE]</g:link>
                                                 </g:if></td>
@@ -58,10 +50,6 @@ $(document).ready(function(){
 				</g:each>
 				</tbody>
 			</table>
-<div class="input-append date" id="datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-  <input class="span2" size="16" type="text" value="12-02-2012">
-  <span class="add-on"><i class="icon-th"></i></span>
-</div>
 			<div class="pagination">
 				<g:paginate total="${blogEntryInstanceTotal}" />
 			</div>

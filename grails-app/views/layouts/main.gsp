@@ -14,7 +14,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<r:require modules="bootstrap"/>
                 <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-                <link rel="stylesheet" href="${resource(dir: 'css', file: 'custom.css')}" type="text/css">
+                <link rel="stylesheet" href="${resource(dir: 'css', file: 'datepicker.css')}" type="text/css">
 		<g:layoutHead/>
         <r:layoutResources />
 	</head>
