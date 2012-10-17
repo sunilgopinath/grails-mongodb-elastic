@@ -25,7 +25,12 @@
                 <g:layoutBody/>
               </div>
               <div class="span2">
-                
+                <h4>What's NYMDev saying</h4>
+                <ul id="twitter_update_list">
+
+                </ul>
+          <g:render template="/grails-app/views/layouts/twitterfeed"/>
+
               </div>
             </div>
           </div>

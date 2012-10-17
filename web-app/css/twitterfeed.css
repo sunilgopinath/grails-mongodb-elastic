@@ -1,0 +1,29 @@
+#twitter_update_list {
+	font-size: 13px;
+	line-height: 21px;
+	list-style: none;
+        overflow: hidden;
+        color: #2f2f2f;
+	font-family: Georgia, serif;
+	font-style: italic;
+	}
+#twitter_update_list li {
+	background: url('images/twitter-divider.gif') bottom left repeat-x;
+	padding-bottom: 7px;
+	margin-bottom: 9px;
+	}
+#twitter_update_list span {
+	color: #2f2f2f;
+	text-decoration: none;
+	}
+#twitter_update_list span a {
+	color: #2f2f2f;
+	text-decoration: underline;
+	}
+#twitter_update_list a {
+	color: #2f2f2f;
+	}
+#twitter_update_list li a:hover {
+    color: #31353d;
+    text-decoration:underline
+}
