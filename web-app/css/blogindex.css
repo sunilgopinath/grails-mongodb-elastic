@@ -1,0 +1,635 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    background: url("images/bg.png") repeat scroll 0 0 transparent;
+    color: #555555;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+:focus {
+    outline: 0 none;
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+a {
+    cursor: pointer;
+}
+a img {
+    border: medium none;
+    cursor: pointer;
+}
+sup {
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 8px;
+}
+h1, h2, h3, h4, h5, h6, b, strong {
+    color: #222222;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 160%;
+}
+h4 {
+    font-size: 140%;
+}
+h5 {
+    font-size: 120%;
+}
+h6 {
+    font-size: 90%;
+}
+p {
+    margin-bottom: 20px;
+}
+.clear {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+#header {
+    background: url("images/header_bg.png") repeat-x scroll left top #4B4B4B;
+    border-bottom: 5px solid #272727;
+    border-top: 1px solid #4B4B4B;
+    clear: both;
+    display: block;
+    height: 65px;
+    width: 100%;
+}
+#logo {
+    float: left;
+    height: 45px;
+    margin-top: 10px;
+    padding: 0;
+    width: 268px;
+}
+#logo h1 {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+#header form#searchform {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #272727;
+    border-radius: 15px 15px 15px 15px;
+    float: right;
+    margin-top: 20px;
+    text-align: right;
+    width: 190px;
+}
+#header form#searchform input[type="text"] {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #777777;
+    float: left;
+    height: 16px;
+    padding: 6px 9px;
+    width: 145px;
+}
+#header form#searchform input[type="submit"] {
+    background: url("images/search.png") no-repeat scroll left bottom transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    height: 22px;
+    text-indent: -9999px;
+    width: 25px;
+}
+#top {
+    background: none repeat scroll 0 0 #69C144;
+    padding: 8px 0;
+}
+#top .wrapper {
+    margin: 0 auto;
+    padding: 0;
+}
+#top .menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+#top .navi ul {
+    font-family: Helvetica,Arial,sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 9999;
+}
+#top .navi ul li {
+    display: inline;
+    margin: 0 5px;
+    padding: 0;
+    text-align: center;
+}
+#top .navi ul li a {
+    border-radius: 5px 5px 5px 5px;
+    color: #DCDCDC;
+    letter-spacing: 0.08em;
+    margin: 0;
+    padding: 6px 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#top .navi ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+#top .navi ul li.current-menu-item a {
+    background: none repeat scroll 0 0 #56953B;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2) inset;
+    color: #F9F9F9;
+}
+#content {
+    padding: 10px 0;
+}
+#content .post {
+    background: none repeat scroll 0 0 #F9F9F9;
+    box-shadow: 0 0 8px #DDDDDD;
+    margin-bottom: 30px;
+    width: 700px;
+}
+.post-wrapper {
+    float: left;
+    width: 700px;
+}
+#content .post .wrap {
+    padding: 15px 40px 40px;
+}
+#content .post h1, #content .post h2 {
+    background: url("images/dotted-line.gif") repeat-x scroll left bottom transparent;
+    color: #333333;
+    font-family: Georgia,serif;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 40px;
+    padding: 30px 0 15px;
+}
+#content .post h1 a, #content .post h2 a {
+    color: #333333;
+    text-decoration: none;
+}
+#content .post h1 a:hover, #content .post h2 a:hover {
+    color: #9AB8DD;
+    text-decoration: none;
+}
+#content .post .entry h1, #content .post .entry h2, #content .post .entry h3, #content .post .entry h4, #content .post .entry h5, #content .post .entry h6 {
+    background: url("images/dotted-line.gif") repeat-x scroll left bottom transparent;
+    color: #333333;
+    font-family: Georgia,serif;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 0 15px;
+    padding: 15px 0;
+}
+#content .post .entry a {
+    color: #333333;
+    text-decoration: underline;
+}
+#content .post .entry a.more-link {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#content .post .entry {
+    margin: 0;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+#content .post .entry blockquote {
+    color: #888888;
+    font-style: italic;
+    margin: 25px 0 25px 10px;
+    padding: 0 20px;
+}
+#content .post .entry ul ul li {
+    list-style-type: disc;
+}
+#content .post .entry ol li {
+    list-style-type: lower-roman;
+}
+#content .post .entry ol li ol li {
+    list-style-type: upper-roman;
+}
+#content .post .entry ol.numberingDecimal li {
+    list-style-type: decimal;
+}
+#content .post .entry dl dt {
+    font-weight: 700;
+}
+#content .post .entry dl dd {
+    font-style: italic;
+    margin-bottom: 18px;
+    text-indent: 12px;
+}
+#content .post .post.home .entry img {
+    border: medium none;
+}
+#content .post img.wp-smiley {
+    border: medium none;
+    padding: 0;
+}
+#content .post .entry .post img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    box-shadow: 0 0 10px #4EB1C6;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    max-width: 600px;
+    padding: 8px;
+}
+#content .post .entry .wp-caption {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 30px;
+    max-width: 578px;
+    padding: 2px;
+    text-align: center;
+}
+#content .post .entry .wp-caption img {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    box-shadow: 0 0 0 #FFFFFF;
+    height: auto;
+    margin: 0;
+    max-width: 566px;
+    padding: 5px 0;
+}
+#content .post .entry .wp-caption-text {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#content .post .entry img {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    height: auto;
+    max-width: 596px;
+    padding: 2px;
+    text-align: center;
+}
+#content .post .alignright, #content .post img.alignright {
+    float: right;
+    margin: 4px 0 5px 20px;
+}
+#content .post .alignleft, #content .post img.alignleft {
+    float: left;
+    margin: 4px 20px 5px 0;
+}
+#content .post .aligncenter, #content .post img.aligncenter {
+    display: block;
+    margin: 4px auto 5px;
+    text-align: center;
+}
+#content .post .attachment-thumbnail {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    padding: 6px;
+}
+#content .post #gallery-1 img {
+    border: 0 none !important;
+}
+#content .post .meta {
+    background: none repeat scroll 0 0 #D8D8D8;
+    border-bottom: 5px solid #777777;
+    clear: both;
+    color: #555555;
+    display: block;
+    font: 11px/13px Helvetica,Arial,sans-serif;
+    padding: 8px 10px;
+    text-shadow: 0 1px 0 #EEEEEE;
+    text-transform: uppercase;
+}
+#content .post .meta a {
+    color: #888888;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: none;
+}
+#content .post .bar-frame {
+    background: url("images/divider-bar.gif") repeat-y scroll 110px 0 transparent;
+    overflow: hidden;
+    padding: 0 0 0 6px;
+    width: 581px;
+}
+#content .post .meta .date {
+    color: #A4A4A4;
+    float: left;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 0 11px 0 0;
+    width: 102px;
+}
+#content .post .meta .day {
+    color: #2E2E2E;
+    float: left;
+    font-size: 46px;
+    letter-spacing: -3px;
+    line-height: 48px;
+}
+#content .post .meta .date .holder {
+    float: right;
+    padding: 5px 0 0;
+    width: 49px;
+}
+#content .post .meta .month {
+    color: #797979;
+    display: block;
+    margin: 0 0 -6px;
+    text-transform: uppercase;
+}
+#content .post .meta .title {
+    color: #494949;
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+}
+#content .post .meta .author {
+    float: left;
+    padding: 16px 14px 0 0;
+    width: 89px;
+}
+#content .post .meta p {
+    margin: 0 !important;
+}
+#content .post .meta .categories {
+    float: left;
+    padding: 16px 11px 0 0;
+    width: 116px;
+}
+#content .post .meta .comments {
+    float: left;
+    padding: 16px 15px 0 0;
+    width: 90px;
+}
+#content .post .meta .tags {
+    float: left;
+    padding: 16px 0 0;
+    width: 105px;
+}
+#content .post .meta strong {
+    font-family: Helvetica,Arial,sans-serif;
+    margin-bottom: 0;
+}
+#postOptions {
+    float: right;
+    text-align: right;
+    width: 22%;
+}
+#content .post #downloadWrapper {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 0 20px;
+    text-align: center;
+    width: 50%;
+}
+#content .post #downloadWrapper a.btn {
+    background-color: #498CE3;
+    background-image: -moz-linear-gradient(center bottom , #498CE3 25%, #308DFF 75%);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: "Helvetica Neue",Helvetica,Verdana,Arial;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #244879;
+}
+#btnDownload span {
+    background: url("http://www.binvisions.com/wp-content/themes/binvisions/images/icon-zip_16x16.png") no-repeat scroll 36px 0 transparent;
+    display: block;
+    font-size: 0.6em;
+    font-style: italic;
+    height: 16px;
+    margin: 0 auto;
+    padding-left: 24px;
+    text-align: center;
+}
+#btnDownload.iconZIP span {
+    background: url("http://www.binvisions.com/wp-content/themes/binvisions/images/icon-zip_16x16.png") no-repeat scroll 36px 0 transparent;
+}
+#btnDownload.iconPDF span {
+    background: url("http://www.binvisions.com/wp-content/themes/binvisions/images/icon-pdf_16x16.png") no-repeat scroll 36px 0 transparent;
+}
+#shareThisWrapper {
+    clear: both;
+    margin-top: 40px;
+}
+#content hr {
+    border-color: #CCCCCC #000000 #FBFBFB;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 15px 0;
+}
+
+#post-jump {
+    position: fixed;
+}
+
+#comments {
+    background-position: center top;
+    background-repeat: repeat-x;
+    border-bottom: 5px solid #777777;
+    clear: both;
+    padding: 30px;
+}
+#comments a {
+    color: #333333;
+}
+#comments .navigation {
+    padding: 0 0 18px;
+}
+h3#comments-title, h3#reply-title {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+h3#comments-title {
+    padding: 0 0 24px;
+}
+.commentlist {
+    list-style: none outside none;
+    margin: 0;
+}
+.commentlist li.comment {
+    background: url("images/dotted-line.gif") repeat-x scroll left bottom transparent;
+    line-height: 24px;
+    margin: 0 0 24px;
+    padding: 0 0 0 80px;
+    position: relative;
+}
+#content .commentlist .children li {
+    border: medium none;
+    box-shadow: 0 0 0 #FFFFFF;
+    list-style: none outside none;
+    margin: 0 0 20px;
+}
+#content #comments .comment-body p {
+    margin: 10px 0;
+}
+#content #comments .comment-body p:last-child {
+    margin-bottom: 6px;
+}
+#content #comments .comment-body blockquote p:last-child {
+    margin-bottom: 24px;
+}
+#content #comments .commentlist ol li {
+    border-bottom: 1px solid #DDDDDD;
+    list-style: none outside none;
+}
+#content .commentlist .avatar {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    height: auto;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    top: 4px;
+    width: 50px;
+}
+#content .comment-author cite {
+    color: #000000;
+    font-style: normal;
+    font-weight: 700;
+}
+#content .comment-author-admin cite {
+    color: #69C144;
+}
+#content .comment-author .says {
+    font-style: italic;
+}
+#content .comment-meta {
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+    font-size: 11px;
+    margin: 0 0 10px;
+}
+#content .comment-meta a:link, #content .comment-meta a:visited {
+    color: #888888;
+    text-decoration: none;
+}
+#content .reply {
+    font-size: 12px;
+    padding: 0 0 24px;
+}
+#content .reply a, a.comment-edit-link {
+    color: #333333;
+    font-weight: 700;
+}
+#content .commentlist .children {
+    list-style: none outside none;
+    margin: 0 0 20px;
+}
+#content #comments .pingback {
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    width: 640px;
+}
+#content .commentlist li.comment + li.pingback {
+    margin-top: -6px;
+}
+#content #comments .pingback p {
+    color: #888888;
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+}
+#content #comments .pingback .url {
+    font-size: 13px;
+    font-style: italic;
+}
+#content .commentlist li.post {
+    box-shadow: 0 0 0 #FFFFFF;
+}
+#content #respond form input[type="submit"] {
+    background: url("images/submit-comment.png") repeat scroll 0 0 transparent;
+    border: 0 none;
+    box-shadow: 0 0 0 #FFFFFF;
+    height: 44px;
+    text-indent: -9999px;
+    width: 158px;
+}
+#content #respond form input[type="submit"]:hover {
+    opacity: 0.4;
+}
+
+ol, ul, ul li, #content #comments .commentlist ol {
+    list-style: none outside none;
+}
+h2, #content .post .entry h1, #content .post .entry h2 {
+    font-size: 180%;
+}
+#header form#searchform label, .home #shareThisWrapper, #content .nopassword, #content .nocomments, img#wpstats {
+    display: none;
+}
+#top .navi, #respond p {
+    margin: 0;
+    padding: 0;
+}
+#content .post .entry a:hover, #content .post .meta a:hover {
+    text-decoration: underline;
+}
+#content .post .entry ul, #content #comments .comment-body ul {
+    margin: 0 0 15px;
+    padding: 0 0 0 25px;
+}
+#content .post .entry ul ul, #content .post .entry ol ol, #content #comments .comment-body ul ul, #content #comments .comment-body ol ol, #comments-list ul #respond {
+    margin: 0;
+}
+#content .post .entry ul li, #content #comments .comment-body ul li {
+    list-style-type: square;
+}
+#content .post .entry ol, #content #comments .comment-body ol {
+    margin: 0 0 15px;
+    padding: 0 0 0 30px;
+}
+#sidebar .widget table#wp-calendar td#today, #bottomBar .widget h2.widgettitle {
+    color: #FFFFFF;
+}
+#content #comments .comment-body ul ul li, #content #comments .comment-body ol li, #content #comments .comment-body ol li ol li {
+    list-style-type: none;
+}
+#content .comment-meta a:active, #content .comment-meta a:hover, #content .reply a:hover, a.comment-edit-link:hover {
+    color: #0C8ABE;
+}
+h3#reply-title, #comments-list #respond {
+    margin: 0 0 18px;
+}
