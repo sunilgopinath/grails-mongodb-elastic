@@ -39,3 +39,10 @@ tinyMCE.init({
 7. Now add the textarea as per usual <g:textArea name="..."/>
 8. Grails escapes html by default inside thinkgs like ${fieldValue(bean:...)} so your beautiful tiny mce markup will be escaped
 9. Change the above to ${object.field} and ex: ${person.firstName} and there you have it.
+ADDING BOOTSTRAP-DATEPICKER.JS
+This was not as complicated as adding the tinymce js file
+1. Went to http://www.eyecon.ro/bootstrap-datepicker/ and downloaded the datepicker
+2. I only need the date picker on the custom form so I created a separate gsp for with only the datepicker js in it so I could call it on create and edit.
+3. The problem was <g:datePicker splits the domain date up into <name>_year <name>_month <name>_day ex: published_year, published_month, published_day so replacing the <g:datePicker> with <input text:..> as used in bootstrap-datepicker will lead to a null exception. How to get around this? My solution was to create 4 hidden fields and then populate them by splitting the date up using jQuery. The result is in the boostrap.js
+ADDING SECURITY FILTERS
+Following the grails quick start guide book did not prove fruitful. The security filters did not work.
