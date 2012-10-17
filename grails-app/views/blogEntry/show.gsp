@@ -89,8 +89,11 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
                         <g:if test="${blogEntryInstance?.author?.twitterHandle}">
-                  	<a href="https://twitter.com/${blogEntryInstance?.author?.twitterHandle}" class="twitter-follow-button" data-show-count="false">${blogEntryInstance?.author?.twitterHandle}</a>
-                  </g:if>
+                  	<a href="https://twitter.com/${blogEntryInstance?.author?.twitterHandle}"
+                           class="twitter-follow-button"
+                           data-show-count="false"
+                           data-size="large">${blogEntryInstance?.author?.twitterHandle}</a>
+                        </g:if>
                         <div style="width:500px;margin:0 auto;">
                     <h1>${blogEntryInstance.title}</h1>
                     <div class="post-info">posted by 
@@ -100,6 +103,14 @@
                     </div>
                     ${blogEntryInstance.entryText}
                   </div>
+                  <!-- Twitter share button -->
+                  <a href="https://twitter.com/share"
+                     class="twitter-share-button"
+                     data-lang="en"
+                     data-size="large"
+                     data-text="Join me in reading"
+                     data-url="http://reset.nymag.com${createLink(uri: "/blogEntry/show/${blogEntryInstance?.id}")}"
+                     data-hashtags="nymdev">Tweet</a>
 		</div>
                   <g:render template="/grails-app/views/layouts/twitterfollow"/>
 	</body>
