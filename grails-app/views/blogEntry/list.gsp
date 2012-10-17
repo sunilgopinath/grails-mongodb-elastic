@@ -19,22 +19,26 @@
               <button type="submit" class="btn btn-primary pull-right"><g:message code="blog.create.label" default="Create new entry" /></button>
           </a>
 		<div id="list-blogEntry" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-                        <g:each in="${blogEntryInstanceList}" status="i" var="blogEntryInstance">
-                          <div id="content">                    
-                            <div id="post-${blogEntryInstance.id}" class="post">
-                              <h2><g:link action="show" id="${blogEntryInstance.id}">${fieldValue(bean: blogEntryInstance, field: "title")}</g:link></h2>
-                              <div class="wrap entry">
-                                ${blogEntryInstance.excerpt}<g:if test="${blogEntryInstance.truncated}">...</g:if>
-                                <p></p>
-                                <g:if test="${blogEntryInstance.truncated}">
-                                  <g:link action="show" id="${blogEntryInstance.id}" class="more-link">Read More...</g:link>
-                                </g:if>
+                        <div id="content">
+                          <div class="post-wrapper">
+                            <g:each in="${blogEntryInstanceList}" status="i" var="blogEntryInstance">
+                              <div id="post-${blogEntryInstance.id}" class="post">
+                                <h2>
+                                  <g:link action="show" id="${blogEntryInstance.id}">
+                                    ${fieldValue(bean: blogEntryInstance, field: "title")}
+                                  </g:link>
+                                </h2>
+                                <div class="wrap entry">
+                                  ${blogEntryInstance.excerpt}<g:if test="${blogEntryInstance.truncated}">...</g:if>
+                                  <p></p>
+                                  <g:if test="${blogEntryInstance.truncated}">
+                                    <g:link action="show" id="${blogEntryInstance.id}" class="more-link">Read More...</g:link>
+                                  </g:if>
                               </div><!--wrap-->
-			<div class="meta">
+                              <div class="meta">
 				<div class="bar-frame">
 					<div class="date">
                                           <%
@@ -68,9 +72,10 @@
 					</div><!--tags-->
 				</div>
 			</div><!--meta-->
-		</div>
+                              </div>
+                            </g:each>
+                          </div>
                         </div>
-                        </g:each>
 
 			<div class="pagination">
 				<g:paginate total="${blogEntryInstanceTotal}" />
@@ -78,3 +83,6 @@
 		</div>
 	</body>
 </html>
+                            <div id="post-1" class="post">
+                              sdlkfjlskdjf
+                            </div>
