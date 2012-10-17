@@ -21,8 +21,8 @@ class Person {
         github()
         image()
         bio(maxSize:5000)
-        username()
-        password()
+        username(unique:true)
+        password(password:true)
         twitterHandle()
     }
 

@@ -182,7 +182,7 @@ p {
 .post-wrapper {
     float: left;
     width: 700px;
-    padding-left:2cm;
+    padding-left:0px;
 }
 #content .post .wrap {
     padding: 15px 40px 40px;

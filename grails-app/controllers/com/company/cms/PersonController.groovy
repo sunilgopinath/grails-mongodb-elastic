@@ -109,7 +109,7 @@ class PersonController {
 
     def logout = {
         session.user = null
-        redirect(url:resource(dir:''))
+        redirect(controller: 'blogEntry', action: 'list')
     }
 
     def validate = {

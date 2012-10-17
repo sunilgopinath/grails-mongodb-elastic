@@ -15,11 +15,18 @@
                    <form class="navbar-search pull-left">
                      <input type="text" class="search-query" placeholder="Search">
                    </form>
-                  <form class="navbar-form pull-right">
-                    <input class="span2" type="text" placeholder="Email">
-                    <input class="span2" type="password" placeholder="Password">
-                    <button type="submit" class="btn">Sign in</button>
-                  </form>
+                  <g:if test="${session.user}">
+                    <div class="pull-right">${session.user.first} ${session.user.last}
+                    <g:link controller="person" action="logout">Logout</g:link>
+                    </div>
+                  </g:if>
+                  <g:else>
+                    <g:form controller="person" action="validate" class="navbar-form pull-right">
+                      <g:textField id="username" name="username" value="" placeholder="Email" class="span2"/>
+                      <g:textField id="password" name="password" value="" placeholder="Password" class="span2"/>
+                      <button type="submit" class="btn">Sign in</button>
+                    </g:form>
+                  </g:else>
               </div><!--/.nav-collapse -->
             </div>
       </div>
