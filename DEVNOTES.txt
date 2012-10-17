@@ -52,3 +52,5 @@ If you google how to add a custom twitter feed, you will most likely end up with
 <script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=nymdev&callback=twitterCallback2&count=5"></script>
 substituting screen_name in the above link with your desired twitter handle. Keep in mind some sites may be out of date and use the old api url but the above one works
 To get it to work, I used the example from themelab.com: http://www.themelab.com/2010/05/18/custom-twitter-widget-tutorial/ and then subtituted my own css
+STYLING THE BLOG INDEX PAGE
+I basically followed the http://www.binvisions.com/tutorials/ example and made some minor CSS tweaks.
