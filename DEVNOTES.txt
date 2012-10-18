@@ -54,3 +54,9 @@ substituting screen_name in the above link with your desired twitter handle. Kee
 To get it to work, I used the example from themelab.com: http://www.themelab.com/2010/05/18/custom-twitter-widget-tutorial/ and then subtituted my own css
 STYLING THE BLOG INDEX PAGE
 I basically followed the http://www.binvisions.com/tutorials/ example and made some minor CSS tweaks.
+ADDING LOGIN REDIRECTION
+The problem was how to redirect to the same page after logging in. Now I am not using a security filter (at the time of writing so there is no going through a security filter, although I could so I am going straight to the controller. There would be no problem if it was a dedicated login page but this is a widget that resides on every page. How do we track the referring uri? The way we can do it is using grails templates and passing in paramters to them. You can pass in a model map into the template you want to render ex: http://grails.org/doc/latest/ref/Tags/render.html so I passed in the requesting uri path. At this stage I know that i only have values of the form /controller/action/${id} so I could easily map it by splitting the request parameter and hardcoding a solution. If i have more sophisticated urls then I might create a service.
+Files involved:
+/grails-app/views/layouts/main.gsp
+/grails-app/views/layouts/_topnav.gsp
+/grails-app/controllers/../PersonController.groovy
