@@ -10,8 +10,8 @@
       <a class="brand" href="${createLink(uri: '/')}">Reset</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li><a href="#about">Blogs</a></li>
-          <li><a href="#contact">People</a></li>
+          <li><a href="${createLink(uri: '/blogEntry/list')}">Blogs</a></li>
+          <li><a href="${createLink(uri: '/person/list')}">People</a></li>
         </ul>
         <form class="navbar-search pull-left">
           <input type="text" class="search-query" placeholder="Search">
