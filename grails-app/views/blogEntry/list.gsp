@@ -1,4 +1,3 @@
-
 <%@ page import="com.company.cms.BlogEntry" %>
 <!doctype html>
 <html>
@@ -22,67 +21,16 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
+                        <!-- makes the vCard type look -->
                         <div id="content">
                           <div class="post-wrapper">
-                            <g:each in="${blogEntryInstanceList}" status="i" var="blogEntryInstance">
-                              <div id="post-${blogEntryInstance.id}" class="post">
-                                <h2>
-                                  <g:link action="show" id="${blogEntryInstance.id}">
-                                    ${fieldValue(bean: blogEntryInstance, field: "title")}
-                                  </g:link>
-                                </h2>
-                                <div class="wrap entry">
-                                  ${blogEntryInstance.excerpt}<g:if test="${blogEntryInstance.truncated}">...</g:if>
-                                  <p></p>
-                                  <g:if test="${blogEntryInstance.truncated}">
-                                    <g:link action="show" id="${blogEntryInstance.id}" class="more-link">Read More...</g:link>
-                                  </g:if>
-                              </div><!--wrap-->
-                              <div class="meta">
-				<div class="bar-frame">
-					<div class="date">
-                                          <%
-                                            def date = blogEntryInstance.published;
-                                            def formattedDate = date.format('yyyy-MMM-dd')
-                                            def (year, month, day) = formattedDate.split("-")
-                                          %>
-						<strong class="day">${day}</strong>
-						<div class="holder">
-							<span class="month">${month}</span>
-							<span class="year">${year}</span>
-						</div>
-					</div><!--date-->
-					<div class="author">
-						<strong class="title">POSTED BY</strong>
-                                                <g:link controller="person"
-                                                        action="show"
-                                                        params="${blogEntryInstance.author.id}"
-                                                        id="${blogEntryInstance.author.id}">
-                                                    ${fieldValue(bean: blogEntryInstance, field: "author")}
-                                                </g:link>
-                                        </div><!--author-->
-					<div class="categories">
-						<strong class="title">POSTED IN</strong> <a rel="category tag" title="View all posts in Tutorials" href="http://www.binvisions.com/tutorials/">Tutorials</a>					</div><!--categories-->
-					<div class="comments">
-						<strong class="title">DISCUSSION</strong>
-						<a title="Comments of : Using the Min and Max Functions in CSS3" href="http://www.binvisions.com/tutorials/using-css3-min-max-functions/#comments">0 Comments</a>
-					</div><!--comments-->
-					<div class="tags">
-						<strong class="title">TAGS</strong> <p> <a rel="tag" href="http://www.binvisions.com/tag/css3/">CSS3</a></p>
-					</div><!--tags-->
-				</div>
-			</div><!--meta-->
-                              </div>
-                            </g:each>
+                            <g:render template="entryCard" collection="${blogEntryInstanceList}"/>
                           </div>
                         </div>
-
+                        <!-- end vCard -->
 			<div class="pagination">
 				<g:paginate total="${blogEntryInstanceTotal}" />
 			</div>
 		</div>
 	</body>
 </html>
-                            <div id="post-1" class="post">
-                              sdlkfjlskdjf
-                            </div>
