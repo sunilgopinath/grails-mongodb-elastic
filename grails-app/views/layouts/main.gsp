@@ -22,7 +22,7 @@
 	</head>
 	<body>
           
-          <g:render template="/grails-app/views/layouts/topnav"/>
+          <g:render template="/grails-app/views/layouts/topnav" model="[requestPath : request.forwardURI - request.contextPath]"/>
           <g:render template="/grails-app/views/layouts/body"/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

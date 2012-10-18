@@ -4,7 +4,16 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class BlogEntryController {
 
+    def beforeInterceptor = [action:this.&auth, except:["index", "list", "show"]]
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+
+    def auth() {
+    if(!session.user) {
+      redirect(controller:"person", action:"login")
+      return false
+    }
+  }
 
     def index() {
         redirect(action: "list", params: params)
