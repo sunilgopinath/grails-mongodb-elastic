@@ -1,18 +1,15 @@
+<div id="post-${it.id}" class="post">
+  <h2>                              
+    <g:link action="show" id="${it.id}" class="editable">${it.title}</g:link>
+  </h2>
 
-                              <div id="post-${it.id}" class="post">
-                                <h2>
-                                  <g:link action="show" id="${it.id}">
-                                    ${it.title}
-                                  </g:link>
-                                </h2>
-                                <div class="wrap entry">
-                                  ${it.excerpt}<g:if test="${it.truncated}">...</g:if>
-                                  <p></p>
-                                  <g:if test="${it.truncated}">
-                                    <g:link action="show" id="${it.id}" class="more-link">Read More...</g:link>
-                                  </g:if>
-                              </div><!--wrap-->
-                              <div class="meta">
+  <div class="wrap entry editable">${it.excerpt}<g:if test="${it.truncated}">...</g:if>
+    <p></p>
+    <g:if test="${it.truncated}">
+      <g:link action="show" id="${it.id}" class="more-link">Read More...</g:link>
+    </g:if>
+  </div><!--wrap-->
+  <div class="meta">
 				<div class="bar-frame">
 					<div class="date">
                                           <%
@@ -45,5 +42,7 @@
 						<strong class="title">TAGS</strong> <p> <a rel="tag" href="http://www.binvisions.com/tag/css3/">CSS3</a></p>
 					</div><!--tags-->
 				</div>
-			</div><!--meta-->
+
+                              </div><!--meta-->
+
                               </div>

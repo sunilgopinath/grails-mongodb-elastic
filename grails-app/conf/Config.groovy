@@ -61,6 +61,16 @@ grails.hibernate.cache.queries = true
 
 grails.resources.adhoc.excludes = ['/js/tiny_mce/**/*.*']
 
+// google analytics
+google.analytics.webPropertyID = "UA-35694647-1"
+google.analytics.customTrackingCode = [
+    [_setDetectFlash: false],
+    [_setCampaignCookieTimeout: 31536000000]
+    [_setDomainName, none],
+    "_trackPageview",
+    "_trackPageLoadTime"
+]
+
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {

@@ -2,8 +2,11 @@ package com.company.cms
 
 import org.springframework.dao.DataIntegrityViolationException
 
+
 class PersonController {
 
+    def mostRecentService
+    
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -25,8 +28,8 @@ class PersonController {
             render(view: "create", model: [personInstance: personInstance])
             return
         }
-
-		flash.message = message(code: 'default.created.message', args: [message(code: 'person.label', default: 'Person'), personInstance.id])
+        mostRecentService.addToRecent(params)
+	flash.message = message(code: 'default.created.message', args: [message(code: 'person.label', default: 'Person'), personInstance.id])
         redirect(action: "show", id: personInstance.id)
     }
 
@@ -136,4 +139,6 @@ class PersonController {
             render(view:'login')
         }
     }
+
+    def card = {}
 }

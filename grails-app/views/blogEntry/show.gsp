@@ -113,6 +113,7 @@
                      data-hashtags="nymdev">Tweet</a>
 		</div>
                   <g:render template="/grails-app/views/layouts/twitterfollow"/>
+                  
 	</body>
 
 </html>

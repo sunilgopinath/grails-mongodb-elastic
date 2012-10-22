@@ -1,8 +1,11 @@
 package com.company.cms
 
 import org.springframework.dao.DataIntegrityViolationException
+import com.mongodb.*;
 
 class BlogEntryController {
+
+    def mongo
 
     def beforeInterceptor = [action:this.&auth, except:["index", "list", "show"]]
 
@@ -21,7 +24,7 @@ class BlogEntryController {
 
     def list() {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
-        [blogEntryInstanceList: BlogEntry.list(params), blogEntryInstanceTotal: BlogEntry.count()]
+        [blogEntryInstanceList: BlogEntry.list(params).reverse(), blogEntryInstanceTotal: BlogEntry.count()]
     }
 
     def create() {
@@ -34,8 +37,7 @@ class BlogEntryController {
             render(view: "create", model: [blogEntryInstance: blogEntryInstance])
             return
         }
-
-		flash.message = message(code: 'default.created.message', args: [message(code: 'blogEntry.label', default: 'BlogEntry'), blogEntryInstance.id])
+	flash.message = message(code: 'default.created.message', args: [message(code: 'blogEntry.label', default: 'BlogEntry'), blogEntryInstance.id])
         redirect(action: "show", id: blogEntryInstance.id)
     }
 

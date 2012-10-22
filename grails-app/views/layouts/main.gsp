@@ -17,6 +17,8 @@
                 <link rel="stylesheet" href="${resource(dir: 'css', file: 'datepicker.css')}" type="text/css">
                 <link rel="stylesheet" href="${resource(dir: 'css', file: 'twitterfeed.css')}" type="text/css">
                 <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
+                <link href="http://cdn.aloha-editor.org/latest/css/aloha.css" rel="stylesheet" type="text/css" />
+                <ga:trackPageview />
 		<g:layoutHead/>
         <r:layoutResources />
 	</head>
