@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" name="com.company.cms.BlogEntryTests" tests="1" time="0.533" timestamp="2012-10-11T03:29:47">
+<testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" name="com.company.cms.BlogEntryTests" tests="5" time="2.016" timestamp="2012-10-27T19:06:37">
   <properties />
-  <testcase classname="com.company.cms.BlogEntryTests" name="testToString" time="0.392" />
+  <testcase classname="com.company.cms.BlogEntryTests" name="testToString" time="1.081" />
+  <testcase classname="com.company.cms.BlogEntryTests" name="testConstraintsGoodValues" time="0.74" />
+  <testcase classname="com.company.cms.BlogEntryTests" name="testConstraintsTitle" time="0.069" />
+  <testcase classname="com.company.cms.BlogEntryTests" name="testConstrainsAuthor" time="0.043" />
+  <testcase classname="com.company.cms.BlogEntryTests" name="testConstraintsPublished" time="0.051" />
   <system-out><![CDATA[--Output from testToString--
+--Output from testConstraintsGoodValues--
+--Output from testConstraintsTitle--
+--Output from testConstrainsAuthor--
+--Output from testConstraintsPublished--
 ]]></system-out>
   <system-err><![CDATA[--Output from testToString--
+--Output from testConstraintsGoodValues--
+--Output from testConstraintsTitle--
+--Output from testConstrainsAuthor--
+--Output from testConstraintsPublished--
 ]]></system-err>
 </testsuite>

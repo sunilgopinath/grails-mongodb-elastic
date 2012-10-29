@@ -11,10 +11,10 @@ class BlogEntry {
 
     static constraints = {
 
-        title()
-        author()
-        published()
-        entryText(maxSize:5000)
+        title blank: false, unique: true
+        author blank: false
+        published(min: new Date() - 1)
+        entryText blank: false, maxSize:5000
         
     }
 

@@ -28,7 +28,7 @@ class PersonController {
             render(view: "create", model: [personInstance: personInstance])
             return
         }
-        mostRecentService.addToRecent(params)
+        mostRecentService.addToRecent(personInstance)
 	flash.message = message(code: 'default.created.message', args: [message(code: 'person.label', default: 'Person'), personInstance.id])
         redirect(action: "show", id: personInstance.id)
     }
@@ -51,7 +51,7 @@ class PersonController {
             redirect(action: "list")
             return
         }
-
+        mostRecentService.addToRecent(personInstance)
         [personInstance: personInstance]
     }
 

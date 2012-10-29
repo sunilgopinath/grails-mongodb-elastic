@@ -30,7 +30,12 @@
 
                 </ul>
           <g:render template="/grails-app/views/layouts/twitterfeed"/>
-
+          <aside>
+            <section>
+              <h4>Most Recent People</h4>
+              <g:mostRecent/>
+            </section>
+          </aside>
               </div>
             </div>
           </div>

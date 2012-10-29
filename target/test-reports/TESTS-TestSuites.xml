@@ -1,50 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" id="0" name="BlogEntryControllerTests" package="com.company.cms" tests="1" time="2.17" timestamp="2012-10-11T03:29:45">
+  <testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" id="0" name="BlogEntryTests" package="com.company.cms" tests="5" time="2.016" timestamp="2012-10-27T19:06:37">
       <properties />
 
-      <testcase classname="com.company.cms.BlogEntryControllerTests" name="testSomething" time="2.023" />
+      <testcase classname="com.company.cms.BlogEntryTests" name="testToString" time="1.081" />
 
-      <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
+      <testcase classname="com.company.cms.BlogEntryTests" name="testConstraintsGoodValues" time="0.74" />
 
-      <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
+      <testcase classname="com.company.cms.BlogEntryTests" name="testConstraintsTitle" time="0.069" />
 
-  </testsuite>
-  <testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" id="1" name="BlogEntryTests" package="com.company.cms" tests="1" time="0.533" timestamp="2012-10-11T03:29:47">
-      <properties />
+      <testcase classname="com.company.cms.BlogEntryTests" name="testConstrainsAuthor" time="0.043" />
 
-      <testcase classname="com.company.cms.BlogEntryTests" name="testToString" time="0.392" />
+      <testcase classname="com.company.cms.BlogEntryTests" name="testConstraintsPublished" time="0.051" />
 
       <system-out><![CDATA[--Output from testToString--
+--Output from testConstraintsGoodValues--
+--Output from testConstraintsTitle--
+--Output from testConstrainsAuthor--
+--Output from testConstraintsPublished--
 ]]></system-out>
 
       <system-err><![CDATA[--Output from testToString--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" id="2" name="PersonControllerTests" package="com.company.cms" tests="1" time="0.159" timestamp="2012-10-11T03:29:47">
-      <properties />
-
-      <testcase classname="com.company.cms.PersonControllerTests" name="testSomething" time="0.114" />
-
-      <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-
-  </testsuite>
-  <testsuite errors="0" failures="0" hostname="sunil-gopinaths-macbook-pro-86.local" id="3" name="PersonTests" package="com.company.cms" tests="1" time="0.039" timestamp="2012-10-11T03:29:47">
-      <properties />
-
-      <testcase classname="com.company.cms.PersonTests" name="testToString" time="0.035" />
-
-      <system-out><![CDATA[--Output from testToString--
-]]></system-out>
-
-      <system-err><![CDATA[--Output from testToString--
+--Output from testConstraintsGoodValues--
+--Output from testConstraintsTitle--
+--Output from testConstrainsAuthor--
+--Output from testConstraintsPublished--
 ]]></system-err>
 
   </testsuite>

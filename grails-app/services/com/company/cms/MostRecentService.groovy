@@ -11,11 +11,22 @@ class MostRecentService {
 
     }
 
-    def addToRecent(params) {
+    def addToRecent(person) {
         def db = mongo.getDB("grails-mongodb-elastic")
         def collection = db.getCollection("feeddisplay")
-        def mostRecent = new MostRecent(params)
+        db.feeddisplay.insert([first:person.first,last:person.last,personId:person.id]);
         return "created"
+        
+    }
+
+    def getRecentPeople() {
+        try {
+            def db = mongo.getDB("grails-mongodb-elastic")
+            return db.feeddisplay.find().sort([$natural:-1])
+        } catch(NullPointerException e) {
+            return "hello"
+        }
+
         
     }
 }

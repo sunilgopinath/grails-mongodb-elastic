@@ -1,10 +1,22 @@
 Testsuite: com.company.cms.BlogEntryTests
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.533 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 2.016 sec
 ------------- Standard Output ---------------
 --Output from testToString--
+--Output from testConstraintsGoodValues--
+--Output from testConstraintsTitle--
+--Output from testConstrainsAuthor--
+--Output from testConstraintsPublished--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testToString--
+--Output from testConstraintsGoodValues--
+--Output from testConstraintsTitle--
+--Output from testConstrainsAuthor--
+--Output from testConstraintsPublished--
 ------------- ---------------- ---------------
 
-Testcase: testToString took 0.392 sec
+Testcase: testToString took 1.081 sec
+Testcase: testConstraintsGoodValues took 0.74 sec
+Testcase: testConstraintsTitle took 0.069 sec
+Testcase: testConstrainsAuthor took 0.043 sec
+Testcase: testConstraintsPublished took 0.051 sec
